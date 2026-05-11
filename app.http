@@ -3,3 +3,6 @@ GET http://localhost:5000/api/certificates
 
 ### Public GET Projects
 GET http://localhost:5000/api/projects
+
+### status
+GET http://localhost:5000/api/status

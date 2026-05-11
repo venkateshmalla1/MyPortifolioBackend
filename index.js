@@ -159,6 +159,13 @@ app.delete('/api/projects/:id', async (req, res) => {
   }
 });
 
+app.get('/api/status', (req, res) => {
+  res.json({
+    message: "Server is alive!",
+    database: mongoose.connection.readyState === 1 ? "Connected" : "Disconnected"
+  });
+});
+
 // --- Start Server ---
 const PORT = parseInt(process.env.PORT, 10) || 3000;
 app.listen(PORT, "0.0.0.0", () => {
